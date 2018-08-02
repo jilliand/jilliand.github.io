@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+  <style>
+
+  .row > .column {
+    padding: 0 8px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+/* This is where I begin the gallery code*/
+  /* Create four equal columns that floats next to eachother */
+  .column {
+    float: left;
+    width: 25%;
+  }
+
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* Caption text */
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+
+  img.demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+
+  p{
+    color:LightGray; font-size: 19px; font-family: sans-serif;
+  }
+  h2{
+    color: Gray; font-family: sans-serif;
+  }
+  h1{
+    color: DimGray; font-family: sans-serif; text-align: center;
+  }
+  body{
+    background-color: DarkSalmon;
+  }
+/*This is where I end the gallery code*/
+
+  #Carneasada {
+    width: 30%;
+    height: 30%;
+  }
+  #Platano {
+    width: 30%;
+    height: 30%;
+  }
+  #seco {
+    width: 30%;
+    height: 30%;
+  }
+  #california {
+    width: 30%;
+    height: 30%;
+  }
+  #spicytuna {
+    width: 20%;
+    height: 20%;
+  }
+  #Santorini{
+    width: 70%;
+    height: 70%;
+  }
+  #Venice{
+    width: 70%;
+    height: 70%;
+  }
+  #Bora{
+    width: 70%;
+    height: 70%;
+  }
+  #Norway{
+    width: 70%;
+    height: 70%;
+  }
+
+  </style>
+
+
+  <script>
+// Open the Modal
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+</head>
+
+
+
+
+
+  <body>
+    <h1> Jillian Dominguez <br>
+      <br>
+    <h2>Where I've lived <br></h1>
+	<p>I grew up in Jamaica, Queens until the age of 12. I lived with both my parents until I was 5 then I just lived with my dad. When I was 12 my sister and I moved in with my mom and her boyfriend in a basement in Ozone Park. Then, I moved to my aunt's house in the Bronx with my sister and my mom. Then, I moved to East New York with my mom, sister, and my mom's boyfriend. Then I moved into my uncle's house near Prospect Park with my sister and my mom. Then, I moved to Midwood, Brooklyn with my sister, my mom, and her boyfriend, which is where I live now. <br></p>
+  <br>
+  <h2>Favorite Foods! <br></h1>
+    <p>I love food from all types of countries, but I especially <em>love</em> Ecuadorean food and East Asian food. <br></p>
+    <p>Both my parents are Ecuadorean, so I grew up with Ecuadorean food, but my favorite dish is arroz con frijoles con platano con carne asada! <br></p>
+    <img src="https://i.pinimg.com/originals/07/6b/b2/076bb24cacc5af3d46c528325670c7b5.jpg" id="Carneasada">
+    <p>One of my all time favorite foods is platano con queso. I've been eating this since I was a baby and I always ask my mom to make it because no one can make it like her. <br></p>
+    <img src="http://cdn.colombia.com/sdi/2011/07/26/platano-asado-con-queso-497607.jpg" id="Platano"> <br>
+    <p>Another one of my favorite Ecuadrean foods is seco de pollo. <br></p>
+    <img src="https://c1.staticflickr.com/7/6206/6081684202_21ab4ffd8b_b.jpg" id="seco">
+
+    <p>When I'm not eating Latin food, I usually eat East Asian food, especially Japanese and Chinese food. <br></p>
+    <p>I especially love sushi. I used to hate sushi, but now I always order sushi when I can. My two favorite rolls are california rolls and spicy tuna rolls.</p>
+    <img src="https://fabulousarizona.com/wp-content/uploads/2014/03/RA-Sushi.jpg" id="california">
+    <br>
+    <img src="https://i.pinimg.com/originals/a5/6a/f6/a56af6bb7ec7ec2f4fed01a865fb38d0.jpg" id="spicytuna">
+    <br>
+    <div class="gallery" align="center">
+    <h2> Places I Want to Visit One Day</h2>
+    <div class="row">
+    <div class="column">
+      <img src="https://wallpapercave.com/wp/rXzvhh6.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" id="Santorini">
+    </div>
+    <div class="column">
+    <img src="http://4.bp.blogspot.com/_2IU2Nt4rD1k/TTh-vSEcjgI/AAAAAAAACpA/0aSRTkUSwzQ/s1600/Venice_Grand_Canal.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" id="Venice">
+  </div>
+  <div class="column">
+    <img src="http://4.bp.blogspot.com/-gKXuUFsDBVc/UEm71LJt3uI/AAAAAAAAEgc/wvflE2UnxzQ/s1600/Bora-Bora-French-Polynesia-2.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" id="Bora">
+  </div>
+  <div class="column">
+    <img src="http://fjordtravel.no/wp-content/uploads/2013/10/003532_ystein-Lunde-Ingvaldsen_www.nordnorge.com_Boe-e1396956304870.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" id="Norway">
+  </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="https://wallpapercave.com/wp/rXzvhh6.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="http://4.bp.blogspot.com/_2IU2Nt4rD1k/TTh-vSEcjgI/AAAAAAAACpA/0aSRTkUSwzQ/s1600/Venice_Grand_Canal.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="http://4.bp.blogspot.com/-gKXuUFsDBVc/UEm71LJt3uI/AAAAAAAAEgc/wvflE2UnxzQ/s1600/Bora-Bora-French-Polynesia-2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="http://fjordtravel.no/wp-content/uploads/2013/10/003532_ystein-Lunde-Ingvaldsen_www.nordnorge.com_Boe-e1396956304870.jpg" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="https://wallpapercave.com/wp/rXzvhh6.jpg" onclick="currentSlide(1)" alt="Santorini">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="http://4.bp.blogspot.com/_2IU2Nt4rD1k/TTh-vSEcjgI/AAAAAAAACpA/0aSRTkUSwzQ/s1600/Venice_Grand_Canal.jpg" onclick="currentSlide(2)" alt="Venice">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="http://4.bp.blogspot.com/-gKXuUFsDBVc/UEm71LJt3uI/AAAAAAAAEgc/wvflE2UnxzQ/s1600/Bora-Bora-French-Polynesia-2.jpg" onclick="currentSlide(3)" alt="Bora Bora">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="http://fjordtravel.no/wp-content/uploads/2013/10/003532_ystein-Lunde-Ingvaldsen_www.nordnorge.com_Boe-e1396956304870.jpg" onclick="currentSlide(4)" alt="Norway">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
